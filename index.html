@@ -31,6 +31,22 @@
     }
     a {
       color: #2e3a59;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .app {
+      border: 1px solid #ddd;
+      background: white;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    }
+    .app img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
@@ -49,11 +65,39 @@
   <main>
     <section>
       <h2>Our Apps</h2>
-      <p><strong>App One</strong> – A short description.  
-         <br>📱 <a href="#">App Store</a> | <a href="#">Google Play</a></p>
-      
-      <p><strong>App Two</strong> – Another short description.  
-         <br>📱 <a href="#">App Store</a> | <a href="#">Google Play</a></p>
+
+      <div class="app">
+        <img src="images/murderer-among-friends.png" alt="Murderer Among Friends">
+        <h3>Murderer Among Friends</h3>
+        <p>A round-based party game for 4–16 players. Inspired by Mafia, with interactive mad-lib style storytelling to drive the narrative.</p>
+        <ul>
+          <li>🔀 Players are randomly assigned roles: Murderer, Detective, Doctor, or Guest</li>
+          <li>🎭 Each role has two unique actions:
+            <ul>
+              <li><strong>Murderer</strong>: Murder or Recruit</li>
+              <li><strong>Detective</strong>: Investigate or Arrest</li>
+              <li><strong>Doctor</strong>: Save or Revive</li>
+              <li><strong>Guest</strong>: Distract or Wave</li>
+            </ul>
+          </li>
+          <li>📖 Players contribute words to shape the unfolding story</li>
+          <li>🕵️ Two teams: Innocent (vote out the murderer) vs. Guilty (last players standing)</li>
+        </ul>
+        <p>
+          📱 <a href="https://apps.apple.com/us/app/murderer-among-friends/id6737068033">App Store</a> | <a href="https://play.google.com/store/apps/details?id=com.stoddcogames.murdereramongfriends&pcampaignid=web_share">Google Play</a><br>
+          🔗 <a href="https://www.youtube.com/@Stoddco">YouTube</a> | <a href="https://x.com/Stoddco">Twitter</a> | <a href="https://www.instagram.com/murdereramongfriends/">Instagram</a>
+        </p>
+      </div>
+
+      <div class="app">
+        <img src="images/forever-flight.png" alt="Forever Flight">
+        <h3>Forever Flight</h3>
+        <p>A simple endless flying game. See how far you can soar while unlocking new planes and avoiding obstacles.</p>
+        <p>
+          📱 <a href="https://apps.apple.com/us/app/forever-flight/id6470160148">App Store</a>
+        </p>
+      </div>
+
     </section>
 
     <section>
@@ -63,7 +107,7 @@
 
     <section>
       <h2>Contact</h2>
-      <p>Email: <a href="stoddco93@gmail.com">stoddco93@gmail.com</a></p>
+      <p>Email: <a href="mailto:stoddco93@gmail.com">stoddco93@gmail.com</a></p>
     </section>
   </main>
 
