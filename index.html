@@ -248,6 +248,28 @@
       margin-bottom: 0.45rem;
     }
 
+    .stack-card .app-art {
+      min-height: 88px;
+      padding: 0.75rem;
+      border-radius: 20px;
+    }
+
+    .stack-card .app-art span {
+      padding: 0.3rem 0.5rem;
+      font-size: 0.65rem;
+    }
+
+    .stack-card .app-art strong {
+      margin-top: 0.5rem;
+      font-size: 1.35rem;
+    }
+
+    .stack-card .app-art p {
+      margin-top: 0.4rem;
+      font-size: 0.78rem;
+      line-height: 1.35;
+    }
+
     .pill-row,
     .feature-list {
       display: flex;
@@ -313,6 +335,46 @@
       min-height: 260px;
       object-fit: cover;
       border-radius: calc(var(--radius-xl) - 8px);
+    }
+
+    .app-art {
+      min-height: 260px;
+      display: grid;
+      align-content: end;
+      padding: 1.5rem;
+      border-radius: calc(var(--radius-xl) - 8px);
+      color: white;
+      background:
+        radial-gradient(circle at top right, rgba(255, 255, 255, 0.18), transparent 28%),
+        linear-gradient(135deg, #243552 0%, #3f5f8d 55%, #d66b4d 100%);
+    }
+
+    .app-art span {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.45rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+
+    .app-art strong {
+      display: block;
+      margin-top: 0.85rem;
+      font-family: "Fraunces", serif;
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
+    }
+
+    .app-art p {
+      margin: 0.7rem 0 0;
+      max-width: 20ch;
+      color: rgba(255, 255, 255, 0.82);
     }
 
     .app-copy {
@@ -504,12 +566,10 @@
 
       <section class="hero" id="top">
         <div class="hero-copy">
-          <span class="eyebrow">Independent App And Product Studio</span>
-          <h1>Thoughtful apps, games, and digital products.</h1>
+          <h1>Apps, games, and utilities.</h1>
           <p>
             Stoddco builds products that feel approachable, useful, and polished,
-            from social mobile games to full-stack web experiences and future apps
-            in new categories.
+            from social mobile games to full-stack web experiences.
           </p>
           <div class="hero-actions">
             <a class="button" href="#apps">Explore Our Apps</a>
@@ -537,10 +597,22 @@
               <div>
                 <div class="pill-row">
                   <span class="pill">iOS</span>
-                  <span class="pill">Arcade</span>
+                  <span class="pill">Endless runner</span>
                 </div>
                 <h3>Forever Flight</h3>
                 <p>An endless flyer focused on quick sessions, smooth challenge, and simple progression.</p>
+              </div>
+            </article>
+
+            <article class="stack-card">
+              <img src="images/gabby.png" alt="FabGabb promotional art." />
+              <div>
+                <div class="pill-row">
+                  <span class="pill">Web</span>
+                  <span class="pill">Full-stack</span>
+                </div>
+                <h3>FabGabb</h3>
+                <p>Speech therapy tool to help assign and track at home practice.</p>
               </div>
             </article>
           </div>
@@ -554,8 +626,7 @@
       <div class="page-shell">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">Selected Work</span>
-            <h2>Games are part of the story, not the whole story.</h2>
+            <h2>Built with passion.</h2>
             <p>
               Stoddco’s work spans entertainment and utility, with an emphasis on
               products that are clear, engaging, and enjoyable to use.
@@ -637,6 +708,77 @@
               </div>
             </div>
           </article>
+
+          <article class="app-card">
+            <img src="images/gabby.png" alt="FabGabb promotional art." />
+            <div class="app-copy">
+              <div class="pill-row">
+                <span class="pill">Full-stack app</span>
+                <span class="pill">Web</span>
+                <span class="pill">FabGabb</span>
+              </div>
+              <div>
+                <h3>FabGabb</h3>
+                <p>
+                  A full-stack speech therapy tool used to help SLPs assign and track at home practice. 
+                </p>
+              </div>
+
+              <ul class="detail-list" aria-label="FabGabb highlights">
+                <li>A tool for SLPs, built by SLPs</li>
+                <li>Assign at home practice and track progress</li>
+                <li>Secure for peace of mind</li>
+              </ul>
+
+              <div class="card-actions">
+                <a class="button" href="https://fabgabb.com/">FabGabb</a>
+              </div>
+            </div>
+          </article>
+
+          <!--
+            New app template:
+            1. Copy this entire article block.
+            2. If you have artwork, replace the .app-art block with an <img>.
+            3. Update the pills, title, description, bullets, and links.
+          <article class="app-card">
+            <div class="app-art" aria-label="App placeholder artwork">
+              <span>Featured App</span>
+              <strong>App Name</strong>
+              <p>Short visual placeholder until artwork is ready.</p>
+            </div>
+            <div class="app-copy">
+              <div class="pill-row">
+                <span class="pill">Platform</span>
+                <span class="pill">Category</span>
+                <span class="pill">Tag</span>
+              </div>
+              <div>
+                <h3>App Name</h3>
+                <p>
+                  One short paragraph explaining what the app is and why it matters.
+                </p>
+              </div>
+
+              <ul class="detail-list" aria-label="App highlights">
+                <li>Highlight one</li>
+                <li>Highlight two</li>
+                <li>Highlight three</li>
+              </ul>
+
+              <ul class="feature-list" aria-label="App features">
+                <li>Feature one</li>
+                <li>Feature two</li>
+                <li>Feature three</li>
+              </ul>
+
+              <div class="card-actions">
+                <a class="button" href="#">Primary link</a>
+                <a class="button-secondary" href="#">Secondary link</a>
+              </div>
+            </div>
+          </article>
+          -->
         </div>
       </div>
     </section>
@@ -645,7 +787,6 @@
       <div class="page-shell">
         <div class="section-heading">
           <div>
-            <span class="eyebrow">About The Studio</span>
             <h2>Small-team focus. Product-first decisions.</h2>
             <p>
               Stoddco LLC is an independent studio based in Virginia creating
