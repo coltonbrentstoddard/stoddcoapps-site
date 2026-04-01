@@ -205,6 +205,7 @@
     }
 
     .hero-panel {
+      position: relative;
       padding: 1.2rem;
       border-radius: var(--radius-xl);
       border: 1px solid rgba(32, 48, 77, 0.12);
@@ -213,11 +214,46 @@
         rgba(255, 255, 255, 0.6);
       box-shadow: var(--shadow);
       backdrop-filter: blur(18px);
+      max-height: 540px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+    }
+
+    .hero-panel::after {
+      content: "";
+      position: sticky;
+      left: 0;
+      right: 0;
+      bottom: -1.2rem;
+      display: block;
+      height: 3.75rem;
+      margin-top: -3.75rem;
+      border-radius: 0 0 calc(var(--radius-xl) - 2px) calc(var(--radius-xl) - 2px);
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(244, 239, 231, 0), rgba(244, 239, 231, 0.96) 72%);
     }
 
     .stack {
       display: grid;
       gap: 1rem;
+    }
+
+    .hero-panel::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    .hero-panel::-webkit-scrollbar-track {
+      background: rgba(31, 41, 55, 0.06);
+      border-radius: 999px;
+    }
+
+    .hero-panel::-webkit-scrollbar-thumb {
+      background: rgba(181, 74, 47, 0.35);
+      border-radius: 999px;
+    }
+
+    .hero-panel::-webkit-scrollbar-thumb:hover {
+      background: rgba(181, 74, 47, 0.5);
     }
 
     .stack-card {
@@ -507,6 +543,10 @@
       .app-card,
       .story-grid {
         grid-template-columns: 1fr;
+      }
+
+      .hero-panel {
+        max-height: 420px;
       }
 
       .section-heading {
